@@ -4,6 +4,7 @@
 <p>phone_number : <%= @restaurant.phone_number %></p>
 <hr>
 <h2>Reviews</h2>
+<%= link_to 'Add a new review', new_restaurant_review_path(@restaurant), class: 'btn btn-secondary' %>
 <% @restaurant.reviews.each do |review| %>
   <p><%= review.content %> <%= '★' * review.rating %><%= '☆' * (5 - review.rating) %></p>
 <% end %>
