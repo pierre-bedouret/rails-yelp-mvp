@@ -1,0 +1,9 @@
+<h1><%= @restaurant.name %></h1>
+<p>category : <%= @restaurant.category %></p>
+<p>address : <%= @restaurant.address %></p>
+<p>phone_number : <%= @restaurant.phone_number %></p>
+<hr>
+<h2>Reviews</h2>
+<% @restaurant.reviews.each do |review| %>
+  <p><%= review.content %> <%= '★' * review.rating %><%= '☆' * (5 - review.rating) %></p>
+<% end %>
