@@ -1,4 +1,5 @@
 <h1><%= @restaurant.name %></h1>
+<p><strong>Rate : </strong> <%= @restaurant.reviews.average(:rating).round(1) %>/5</p>
 <p>category : <%= @restaurant.category %></p>
 <p>address : <%= @restaurant.address %></p>
 <p>phone_number : <%= @restaurant.phone_number %></p>
