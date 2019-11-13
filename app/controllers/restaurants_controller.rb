@@ -10,6 +10,7 @@ class RestaurantsController < ApplicationController
 
   def new
     @restaurant = Restaurant.new
+    @options = ["chinese", "italian", "japanese", "french", "belgian"]
   end
 
   def create

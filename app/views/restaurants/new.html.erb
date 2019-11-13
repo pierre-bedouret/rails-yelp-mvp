@@ -2,10 +2,7 @@
 
 <%= simple_form_for @restaurant do |f| -%>
   <%= f.input :name, error: 'Name is mandatory, please specify one' %>
-  <% options = ["chinese", "italian", "japanese", "french", "belgian"] %>
-  <%= f.input :category, label: 'Category' do %>
-    <%= f.select :category, options, include_blank: 'Select a Category', input_html: {class: 'special'}%>
-  <% end %>
+  <%= f.input :category, as: :select, collection: @options, include_blank: 'Select a Category', class: 'form_control'%>
   <%= f.input :address %>
   <%= f.input :phone_number %>
   <%= f.submit class: 'btn btn-primary w-100' %>
