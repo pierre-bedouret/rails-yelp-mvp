@@ -1,8 +1,8 @@
 <h1>Create a new restaurant</h1>
 
 <%= simple_form_for @restaurant do |f| -%>
-  <%= f.input :name, error: 'Name is mandatory, please specify one' %>
-  <%= f.input :category, as: :select, collection: @options, include_blank: 'Select a Category', class: 'form_control'%>
+  <%= f.input :name %>
+  <%= f.input :category, collection: Restaurant::CATEGORIES, include_blank: 'Select a Category'%>
   <%= f.input :address %>
   <%= f.input :phone_number %>
   <%= f.submit class: 'btn btn-primary w-100' %>
